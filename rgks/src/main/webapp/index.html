@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询车次</title>
+    <link href="css/search.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/search.js"></script>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="searchPanel" >
+            <form action="searchRoute.jsp" method="get" style="width: 100%;height: 100%">
+                <table style="width: 100%;height: 100%;">
+                    <tr style="width: 100%;">
+                        <th colspan="2" height="20%" style="font-size: 200%;border-bottom-style: solid;color: white">车次信息检索系统</th>
+                    </tr>
+                    <tr style="margin-top: 5%;color: darkblue;font-size: 140%;height: 20%">
+                        <td width="40%" height="100%">
+                            <input type="text" value="请输入起点" name="start" onclick="clearInput(this)">
+                        </td>
+                        <td width="15%">
+                            <img src="img/arrow.png" width="60%">
+                        </td>
+                        <td width="40%" height="100%">
+                            <input type="text" value="请输入终点" name="end" onclick="clearInput(this)">
+                        </td>
+                    </tr>
+                    <tr style="height: 20%">
+                        <td style="height: 100%;font-size: 140%;color: white">出发时间</td>
+                    </tr>
+                    <tr style="height: 20%;font-size: 120%">
+                        <td style="height: 100%;margin-right: 20px">
+                            <select style="margin-right: 20px" name="year" >
+                                <option>2019</option>
+                            </select>
+                            <span>
+                                年
+                            </span>
+                        </td>
+                        <td style="height: 100%;margin-right: 20px">
+                            <select style="margin-right: 20px" name="month">
+                                <option>01</option>
+                                <option>02</option>
+                                <option>03</option>
+                                <option>04</option>
+                                <option>05</option>
+                                <option>06</option>
+                                <option>07</option>
+                                <option>08</option>
+                                <option>09</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                            <span>
+                                月
+                            </span>
+                        </td>
+                        <td style="height: 100%">
+                            <select style="margin-right: 20px" name="day" onchange="checkTime()">
+                                <option>01</option>
+                                <option>02</option>
+                                <option>03</option>
+                                <option>04</option>
+                                <option>05</option>
+                                <option>06</option>
+                                <option>07</option>
+                                <option>08</option>
+                                <option>09</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>29</option>
+                                <option>30</option>
+                                <option>31</option>
+                            </select>
+                            <span>
+                                日
+                            </span>
+                        </td>
+                    </tr>
+                    <tr style="height: 15%">
+                        <td>
+                            <input height="100%" type="submit" value="确定">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
