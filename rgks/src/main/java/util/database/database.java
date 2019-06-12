@@ -3,7 +3,7 @@ package util.database;
 import java.sql.*;
 
 public class database {
-    private final String url = "134.175.104.191";
+    private final String url = "jdbc:mysql://134.175.104.191/rgks?characterEncoding=UTF-8";
     private final String user = "root";
     private final String passwd = "19972279999";
     protected Connection connect = null;
@@ -27,18 +27,18 @@ public class database {
             e.printStackTrace();
         }
     }
-    public void destory(){
-        if(stmt != null){
-            try{
+    public void destory() {
+        if (stmt != null) {
+            try {
                 stmt.close();
-            } catch (SQLException e){
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
-        if(connect != null){
-            try{
+        if (connect != null) {
+            try {
                 connect.close();
-            } catch (SQLException e){
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
         }

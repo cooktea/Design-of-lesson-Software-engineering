@@ -1,0 +1,57 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+tr{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+td{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    height: 60%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0);
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    font-size: 120%;
+    color: black;
+}
+select{
+    height: 40%;
+}
+option{
+    font-size: 120%;
+    height: 100%;
+}
+
+.mainContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchPanel{
+    width: 40%;
+    height: 60%;
+    border-style: hidden;
+    border-radius: 10px;
+    background-color: gray;
+}
