@@ -27,4 +27,20 @@
     <servlet-name>login</servlet-name>
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>book</servlet-name>
+    <servlet-class>bookTicket</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>book</servlet-name>
+    <url-pattern>/bookTicket</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>unBook</servlet-name>
+    <servlet-class>unbook</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>unBook</servlet-name>
+    <url-pattern>/unBook</url-pattern>
+  </servlet-mapping>
 </web-app>
