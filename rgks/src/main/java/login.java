@@ -17,6 +17,15 @@ public class login extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String idCardNumber = request.getParameter("name");
         String pwd = request.getParameter("password");
+        //验证管理员登陆
+        if(idCardNumber.length() <10){
+            //写死的管理员账号,懒得改数据库了
+            if("root".equals(idCardNumber) && "123456".equals(pwd)){
+                response.getWriter().println("管理员登陆成功，3秒后跳转至管理界面。");
+                response.setHeader("refresh","3,URL=manager.html");
+                return;
+            }
+        }
         dbLogin db = new dbLogin(idCardNumber,pwd);
         String number = db.login();
         if(number == null){

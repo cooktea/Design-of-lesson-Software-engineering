@@ -22,8 +22,10 @@ public class dbBook extends database {
         String sql = String.format("insert into orders(user,start,end,date,route,seat) values(\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\")",phoneNumber,start,end,date,id,seat);
         try {
             this.init();
+            System.out.println(sql);
             stmt.executeUpdate(sql);
             sql = String.format("update route set %s = %s+1 where number = \"%s\" and date = \"%s\"",seat,seat,id,date);
+            System.out.println(sql);
             stmt.executeUpdate(sql);
         } catch (SQLException e){
             e.printStackTrace();

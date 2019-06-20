@@ -43,4 +43,20 @@
     <servlet-name>unBook</servlet-name>
     <url-pattern>/unBook</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>addseat</servlet-name>
+    <servlet-class>addseat</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addseat</servlet-name>
+    <url-pattern>/addSeat</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>deleteuser</servlet-name>
+    <servlet-class>deleteUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteuser</servlet-name>
+    <url-pattern>/deleteUser</url-pattern>
+  </servlet-mapping>
 </web-app>

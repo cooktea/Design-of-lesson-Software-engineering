@@ -10,7 +10,7 @@ function checkTime() {
     console.log(day);
     if(days[month-1] < day){
         alert("请输入正确的日期");
-        date[2].value = "01";
+        date[2].value = "--";
         return;
     }
     var today = new Date();
@@ -19,7 +19,7 @@ function checkTime() {
     console.log(targetDay);
     if(targetDay < today){
         alert("请勿输入非法日期");
-        date[2].value = "01";
+        date[2].value = "--";
         return;
     }
 }

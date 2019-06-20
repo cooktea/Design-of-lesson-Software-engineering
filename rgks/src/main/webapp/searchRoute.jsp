@@ -29,12 +29,12 @@
                 <th>出发时间</th>
                 <th>到达</th>
                 <th>到达时间</th>
-                <th colspan="2">二等座余量</th>
-                <th colspan="2">一等座余量</th>
-                <th colspan="2">商务座余量</th>
+                <th>二等座余量</th>
+                <th>一等座余量</th>
+                <th>商务座余量</th>
                 <th>列车类型</th>
                 <th>价格</th>
-                <th>操作</th>
+                <th colspan="2">操作</th>
             </tr>
             <%
                 request.setCharacterEncoding("UTF-8");
@@ -52,38 +52,49 @@
                     out.println("<td>"+end);
                     out.println("<td>"+routes.get(i).arrTime);
                     out.println("<td>"+routes.get(i).seat[1]);
-                    out.println("<td>");
-                    out.println("<form action=\"bookTicket\" method=\"post\">");
-                    out.println("<input type=\"hidden\" name=\"id\" value=\""+routes.get(i).id+"\">");
-                    out.println("<input type=\"hidden\" name=\"date\" value=\""+time+"\">");
-                    out.println("<input type=\"hidden\" name=\"start\" value=\""+start+"\">");
-                    out.println("<input type=\"hidden\" name=\"end\" value=\""+end+"\">");
-                    out.println("<input type=\"hidden\" name=\"seat\" value=\"seatOne\">");
-                    out.println("<input type=\"submit\" name=\"id\" value=\"订票\">");
-                    out.println("</from>");
+//                    out.println("<td>");
+//                    out.println("<form action=\"bookTicket\" method=\"post\">");
+//                    out.println("<input type=\"hidden\" name=\"id\" value=\""+routes.get(i).id+"\">");
+//                    out.println("<input type=\"hidden\" name=\"date\" value=\""+time+"\">");
+//                    out.println("<input type=\"hidden\" name=\"start\" value=\""+start+"\">");
+//                    out.println("<input type=\"hidden\" name=\"end\" value=\""+end+"\">");
+//                    out.println("<input type=\"hidden\" name=\"seat\" value=\"seatTwo\">");
+//                    out.println("<input type=\"submit\" name=\"id\" value=\"订票\">");
+//                    out.println("</from>");
                     out.println("<td>"+routes.get(i).seat[0]);
-                    out.println("<td>");
-                    out.println("<form action=\"bookTicket\" method=\"post\">");
-                    out.println("<input type=\"hidden\" name=\"id\" value=\""+routes.get(i).id+"\">");
-                    out.println("<input type=\"hidden\" name=\"date\" value=\""+time+"\">");
-                    out.println("<input type=\"hidden\" name=\"start\" value=\""+start+"\">");
-                    out.println("<input type=\"hidden\" name=\"end\" value=\""+end+"\">");
-                    out.println("<input type=\"hidden\" name=\"seat\" value=\"seatTwo\">");
-                    out.println("<input type=\"submit\" name=\"id\" value=\"订票\">");
-                    out.println("</from>");
+//                    out.println("<td>");
+//                    out.println("<form action=\"bookTicket\" method=\"post\">");
+//                    out.println("<input type=\"hidden\" name=\"id\" value=\""+routes.get(i).id+"\">");
+//                    out.println("<input type=\"hidden\" name=\"date\" value=\""+time+"\">");
+//                    out.println("<input type=\"hidden\" name=\"start\" value=\""+start+"\">");
+//                    out.println("<input type=\"hidden\" name=\"end\" value=\""+end+"\">");
+//                    out.println("<input type=\"hidden\" name=\"seat\" value=\"seatOne\">");
+//                    out.println("<input type=\"submit\" name=\"id\" value=\"订票\">");
+//                    out.println("</from>");
                     out.println("<td>"+routes.get(i).seat[2]);
-                    out.println("<td>");
-                    out.println("<form action=\"bookTicket\" method=\"post\">");
-                    out.println("<input type=\"hidden\" name=\"id\" value=\""+routes.get(i).id+"\">");
-                    out.println("<input type=\"hidden\" name=\"date\" value=\""+time+"\">");
-                    out.println("<input type=\"hidden\" name=\"start\" value=\""+start+"\">");
-                    out.println("<input type=\"hidden\" name=\"end\" value=\""+end+"\">");
-                    out.println("<input type=\"hidden\" name=\"seat\" value=\"seatBuss\">");
-                    out.println("<input type=\"submit\" name=\"id\" value=\"订票\">");
-                    out.println("</from>");
+//                    out.println("<td>");
+//                    out.println("<form action=\"bookTicket\" method=\"post\">");
+//                    out.println("<input type=\"hidden\" name=\"id\" value=\""+routes.get(i).id+"\">");
+//                    out.println("<input type=\"hidden\" name=\"date\" value=\""+time+"\">");
+//                    out.println("<input type=\"hidden\" name=\"start\" value=\""+start+"\">");
+//                    out.println("<input type=\"hidden\" name=\"end\" value=\""+end+"\">");
+//                    out.println("<input type=\"hidden\" name=\"seat\" value=\"seatBuss\">");
+//                    out.println("<input type=\"submit\" name=\"id\" value=\"订票\">");
+//                    out.println("</from>");
                     out.println("<td>"+routes.get(i).type);
                     out.println("<td>"+routes.get(i).price);
                     out.println("<td><a href=\"routeInfo.jsp?id="+routes.get(i).id+"\">查看详情</a>");
+                    out.println("<td>");
+                    out.println("<form action=\"bookTicket\" method=\"post\">");
+                    out.println("<input type=\"hidden\" name=\"id\" value=\""+routes.get(i).id+"\">");
+                    out.println("<input type=\"hidden\" name=\"date\" value=\""+time+"\">");
+                    out.println("<input type=\"hidden\" name=\"start\" value=\""+start+"\">");
+                    out.println("<input type=\"hidden\" name=\"end\" value=\""+end+"\">");
+                    out.println("<input type=\"radio\" name=\"seat\" value=\"seatTwo\">二等座");
+                    out.println("<input type=\"radio\" name=\"seat\" value=\"seatOne\">一等座");
+                    out.println("<input type=\"radio\" name=\"seat\" value=\"seatBuss\">商务座");
+                    out.println("<input type=\"submit\" name=\"id\" value=\"订票\">");
+                    out.println("</from>");
                 }
             %>
         </table>

@@ -15,6 +15,7 @@
 <head>
     <title>订单信息</title>
     <link href="css/routeList.css" type="text/css" rel="stylesheet">
+
 </head>
 <body>
     <div class="mainContainer">
@@ -45,7 +46,7 @@
                     List<orders> myOrders = db.getOrders();
                     for(int i=0;i<myOrders.size();i++){
                         orders order = myOrders.get(i);
-                        out.println("<tr>");
+                        out.println("<tr id=\"order-"+i+"\">");
                         out.println(String.format("<td>%s</td>",order.id));
                         out.println(String.format("<td>%s</td>",order.date));
                         out.println(String.format("<td>%s</td>",order.start));
