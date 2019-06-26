@@ -26,7 +26,7 @@ input{
     text-align: center;
     background-color: rgba(0,0,0,0);
     border-style: solid;
-    border-color: white;
+    border-color: blue;
     border-radius: 10%;
     font-size: 120%;
     color: black;
@@ -48,10 +48,9 @@ option{
     align-items: center;
 }
 
-.searchPanel{
+.searchPanel {
     width: 40%;
     height: 60%;
-    border-style: hidden;
+    border-style: solid;
     border-radius: 10px;
-    background-color: gray;
 }

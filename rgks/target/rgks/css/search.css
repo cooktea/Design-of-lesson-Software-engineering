@@ -48,10 +48,9 @@ option{
     align-items: center;
 }
 
-.searchPanel{
+.searchPanel {
     width: 40%;
     height: 60%;
-    border-style: hidden;
+    border-style: solid;
     border-radius: 10px;
-    background-color: gray;
 }
