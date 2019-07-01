@@ -3,9 +3,9 @@ package util.database;
 import java.sql.*;
 
 public class database {
-    private final String url = "jdbc:mysql://134.175.104.191/rgks?characterEncoding=UTF-8";
-    private final String user = "root";
-    private final String passwd = "19972279999";
+    private final String url = "jdbc:mysql://********";
+    private final String user = "****";
+    private final String passwd = "*******";
     protected Connection connect = null;
     protected Statement stmt = null;
     protected ResultSet res = null;
